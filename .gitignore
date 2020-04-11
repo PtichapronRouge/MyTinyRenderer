@@ -7,6 +7,7 @@
 *.o
 *.obj
 build/
+compile_commands.json
 
 # Precompiled Headers
 *.gch
