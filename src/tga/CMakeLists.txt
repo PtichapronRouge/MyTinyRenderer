@@ -24,5 +24,3 @@ install(TARGETS tga
 install(FILES ${headers}
     DESTINATION include/${CMAKE_PROJECT_NAME}
 )
-
-

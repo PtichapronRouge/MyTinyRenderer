@@ -20,13 +20,20 @@ add_compile_options(
 
 #======================================================================
 
-foreach(module IN ITEMS src/tga)
+foreach(module IN ITEMS src/tga src/raster)
     add_subdirectory(${module})
 endforeach()
 
 add_executable(Renderer main.cpp)
+
 target_link_libraries(Renderer PUBLIC tga)
 target_include_directories(Renderer PUBLIC
     "${PROJECT_BINARY_DIR}"
     "${PROJECT_SOURCE_DIR}/tga"
+)
+
+target_link_libraries(Renderer PUBLIC raster)
+target_include_directories(Renderer PUBLIC
+    "${PROJECT_BINARY_DIR}"
+    "${PROJECT_SOURCE_DIR}/raster"
 )
