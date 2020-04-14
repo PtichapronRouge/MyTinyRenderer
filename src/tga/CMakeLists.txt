@@ -1,11 +1,11 @@
 file(GLOB
     src
-    tgaimage.cpp
+    *.cpp
 )
 
 file(GLOB
     headers
-    tgaimage.h
+    *.h *.hpp
 )
 
 add_library(tga

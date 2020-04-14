@@ -1,11 +1,11 @@
 file(GLOB
     src
-    line.cpp
+    *.cpp
 )
 
 file(GLOB
     headers
-    line.hpp
+    *.hpp
 )
 
 add_library(raster
