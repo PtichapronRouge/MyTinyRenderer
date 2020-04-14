@@ -7,6 +7,7 @@
  */
 
 #include "line.hpp"
+#include "vector.hpp"
 
 #include <math.h>
 
@@ -74,4 +75,9 @@ void plot_line(int x0, int y0, int x1, int y1, TGAImage& image, const TGAColor& 
             plot_line_low(x1, y1, x0, y0, image, color);
         }
     }
+}
+
+void plot_line(Vec2i v0, Vec2i v1, TGAImage& image, const TGAColor& color)
+{
+    plot_line(v0.x, v0.y, v1.x, v1.y, image, color);
 }
